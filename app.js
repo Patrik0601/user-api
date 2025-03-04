@@ -1,6 +1,8 @@
 import express from "express"
-
+import path from "path"
+import __dirname from "./util/rootpath.js"
 const app = express()
+app.use(express.static(path.join(__dirname, 'public')))
 const PORT = 3000
 
 app.use(express.json())
